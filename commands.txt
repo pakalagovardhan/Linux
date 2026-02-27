@@ -1,0 +1,28 @@
+Linux --> Linux introduced by Linus torvalds
+
+To Generate Key-Pair from local.
+ssh-keygen -f <file name>
+
+To connect server from local.
+ssh -i <pem file> ec2-user@<public ip>
+
+commands.
+uname -> user name
+uname -a -> user name with full information.
+uname --help 
+pwd -> present working directory
+cd .. -> one step back
+ls -> list files
+ll or ls -l -> To list files with full information
+
+After login.
+$ -> normal user
+# -> super user or root user  (sudo su - or sudo -i)
+cd / -> Home directory
+cd -> Any where to go home directory
+ls -l -> list all files
+ls -lr -> list all files in reverese order
+ls -lt -> latest on top
+ls -ltr -> latest at bottom
+ls -ltrh -> human readable 
+ls -la -> To see hidden files

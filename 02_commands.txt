@@ -1,0 +1,53 @@
+To Create File.
+touch <file name>
+To enter data in it.
+cat > <file name>
+cat >> <file name>
+To save enter ctr+d
+
+Create folder--> mkdir <file name>
+Delete folder--> rmdir <file name> (without any data)
+with data    --> rm -rf <file name>
+
+files
+rm -f <file name>
+rm <file name>
+
+copy--> cp devops.txt joindevops/
+move--> mv devops.txt joindevops
+Rename--> mv aws.txt awss.txt
+          mv awss.txt joindevops/aws.txt
+
+To see URL data --> curl <url>
+To download     --> wget <url?
+
+To search a word in a file
+cat session02.txt | grep Linux
+cat session02.txt | grep -i linux (To see case sensitive words)
+grep linux session02.txt
+
+cut
+echo <url> | cut -d "/" -f1
+                        (-f1-8) or (-f1-2)
+
+awk
+echo <url> | awk -F "/" '{print $NF}'  -- To see last word
+                        '{print $1F}'
+
+To practice awk commands
+cp /etc/passwd users
+awk -F ":" '{print $1F}' users
+                   $1F,$3F
+
+cat users | head -- To see top 10 lines
+                -n6 -- top 6 lines
+cat users | tail -- bottom 10 lines
+
+To check running logs
+tail -f <file name>
+
+To find
+find / -name "users"
+current directory
+find . -name "users"
+find . -name "*se**"
