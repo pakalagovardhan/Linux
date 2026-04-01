@@ -1,0 +1,45 @@
+sudo su -
+---------
+useradd suresh
+id suresh
+
+To check
+--------
+cat /etc/passwd
+cat /etc/group
+
+Create group
+------------
+groupadd devops
+cat /etc/group
+To change primary group
+-----------------------
+usermod -g devops suresh
+id suresh
+groupadd testers
+To change secondary group
+-------------------------
+usermod -aG testers suresh
+id suresh
+To delete user
+-------------
+userdel suresh
+***But group still exist 
+Remove user secondary group
+---------------------------
+-> gpasswd -d suresh devops
+To delete group
+--------------
+groupdel testers 
+
+To login user
+------------
+useradd suresh
+passwd suresh (To set password)
+change passwd policy -----> vi /etc/ssh/ssh_config (yes)
+ssh suresh@<ip>
+
+To test
+------
+sshd -t
+systemctl restart sshd

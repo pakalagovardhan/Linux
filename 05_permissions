@@ -1,0 +1,17 @@
+R -> 4
+W -> 2
+X -> 1
+
+touch aws
+chmod ugo+w aws
+chmod o-w aws
+chmod ugo+rwx aws
+chmod 700 aws
+
+change ownership
+----------------
+cd /tmp
+touch aws.txt (Having ec2-user as owner)
+sudo useradd suresh (we need to change ownership aws.txt to suresh)
+sudo chown suresh aws.txt (To change owner)
+sudo chown suresh:suresh aws.txt (To change group and user of the file)

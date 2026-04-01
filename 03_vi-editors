@@ -1,0 +1,31 @@
+To Create file
+--------------
+vim devops.txt
+i -> insert
+Ese -> escape mode or cmd
+:noh -> No highlight
+:set nu -> set numbers
+:set nonu -> No numbers
+:27d -> To delete 27 line
+:%d -> To delete all
+:4s/sbin/SBIN (To change name)
+:8s/sbin/SBIN/g -> To change total line 
+:%s/sbin/SBIN/g -> To replace all in file
+
+ESC Mode
+--------
+u -> undo
+:wq! -> force write and quit
+:q -> quit
+:wq -> save & exit
+:q! -> exit without saving
+:/ec2-user -> To search a word in forward
+n -> To move
+:?sbin -> To search a word in reverse
+
+yy->To copy
+p-> paste
+U->undo
+dd-> cut line
+gg->To go top
+shift+g->To go bottom

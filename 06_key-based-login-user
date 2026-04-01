@@ -1,0 +1,38 @@
+1.create user.
+2.siva can send his public key to admin user.
+3./home/siva admin creates .ssh in /home/siva folder.
+4.siva is only owner to this folder 700.
+5.create a file called authorized.keys with access 600.
+6.admin keeps siva public key here.
+7.now siva should be able to login with key.
+
+steps
+----
+sudo su 
+useradd siva
+cd ../siva
+mkdir .ssh
+chmod 700 -R .ssh/
+cd .ssh/
+touch authorized_keys
+create key (ssh-keygen -f siva)
+vi authorized_keys
+chmod 600 authorized_keys
+cd ..
+chown siva:siva -R .ssh
+cd .ssh
+cmd (To login)
+ssh -i siva siva@<ip>
+id siva
+
+To give root access to user
+---------------------------
+vim /etc/sudoers (uncomment pwd)
+usermod -aG wheel siva
+id siva
+exit
+
+Again login
+-----------
+ssh -i siva siva@<ip>
+sudo useradd suresh

@@ -1,0 +1,29 @@
+yum/dnf
+To install
+----------
+sudo su -
+dnf install git
+sudo dnf install nginx -yum
+To Remove/delete
+----------------
+dnf remove git -y
+sudo dnf remove nginx -y
+
+path: cd /etc/yum.repo.d
+
+To see already installed 
+------------------------
+dnf list installed (available we can install)
+dnf list installed | grep python
+
+private key stored by default (/.ssh/id_rsa)
+
+Service management
+------------------
+systemctl start nginx
+systemctl stop nginx
+systemctl status nginx
+systemctl enable nginx
+systemctl restart nginx
+
+URL: http://<ip>:80
