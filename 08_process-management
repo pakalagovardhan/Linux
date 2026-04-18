@@ -1,0 +1,34 @@
+sudo su -
+
+ps
+ps -ef | grep nginx
+
+2 Types of process
+------------------
+foreground and background
+sleep 10 (FG)
+sleep 10 & (BG) -> It runs BG and create PID
+ps -ef | grep sleep
+sleep 100 &
+ps -ef | grep sleep
+kill 166990 ->request to terminate
+ps -ef | grep sleep
+kill -9 PID ->order to terminate
+top
+q->quit
+htop 
+dnf install htop -y
+htop
+top -p 31101 -> check particular resources
+
+Network management
+------------------
+To check open ports
+netstat -lntp
+
+Troubleshooting
+---------------
+systemctl status <sn>
+ps -ef | grep <sn>
+netstat -lntp
+top -p PID
